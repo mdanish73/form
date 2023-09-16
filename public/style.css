@@ -14,7 +14,7 @@ html, body{
     height: 100vh;
     background: linear-gradient(270deg, rgb(46, 46, 204), rgb(9, 9, 99));
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .container .heading h1{
@@ -27,10 +27,52 @@ html, body{
 
 .container #form form{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 25px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50% , -50%);
+}
+
+.formInputs{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    gap: 15px;
+}
+
+.formInputs:nth-child(4){
+    justify-content: flex-start;
+}
+
+input{
+    outline: none;
+    padding: 0.7vw;
+    border-radius: 50px;
+    border: none;
+}
+
+.submitButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submitButton button{
+    padding: 0.7vw 1vw;
+    width: 15vw;
+    border: 3px solid white;
+    border-radius: 50px;
+    font-size: 1vw;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    color: white;
+}
+
+.submitButton button:hover{
+    background-color: yellow;
+    color: black;
+    border: 3px solid yellow;
 }
