@@ -1,7 +1,7 @@
 {
     "version": 2,
     "name": "form",
-    "builds": [{ "source": "index.js", "use": "@vercel/node" }],
-    "routes": [{ "source": "/(.*)", "destination": "/index.js" }],
-    "rewrites": [{ "source": "/(.*)", "destination": "/index.js" }]
+    "builds": [{ "src": "index.js", "use": "@vercel/node" }],
+    "routes": [{ "src": "/(.*)", "destination": "/index.js" }],
+    "rewrites": [{ "src": "/(.*)", "destination": "/index.js" }]
 }
