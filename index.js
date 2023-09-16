@@ -8,10 +8,10 @@ app.use(express.json());
 app.use("/form/registration", studentRoutes);
 
 app.set('view engine', 'ejs');
-app.use(express.static(__form+'/public'));
+app.use(express.static(__dirname+'/public'));
 
-app.get("form", function(req, res) {
-  res.render(__form+'/views/form.ejs');
+app.get("/", function(req, res) {
+  res.render(__dirname+'/views/form.ejs');
 });
 
 // mongoose.connect("mongodb://127.0.0.1:27017").then((res) => {
