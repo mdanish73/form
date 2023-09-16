@@ -2,6 +2,5 @@
     "version": 2,
     "name": "form",
     "builds": [{ "src": "index.js", "use": "@vercel/node" }],
-    "routes": [{ "src": "/(.*)", "destination": "/index.js" }],
-    "rewrites": [{ "src": "/(.*)", "destination": "/index.js" }]
+    "routes": [{ "src": "/(.*)", "destination": "/index.js" }]
 }
