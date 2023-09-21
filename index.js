@@ -17,10 +17,6 @@ app.use('/auth', authRoutes);
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname+'/public'));
 
-app.get("/form", function( req, res ) {
-  res.render(__dirname+'/views/form.ejs');
-});
-
 app.get("/", function( req, res ) {
   res.render(__dirname+'/views/home.ejs');
 });
