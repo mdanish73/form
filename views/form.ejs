@@ -1,46 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
-        <div class="heading">
-            <h1>Student Registration Form</h1>
-        </div>
+        <div class="main">
 
-        <div id="form">
-            <form action="/form/registration">
-                <div class="formInputs">
-                    <label for="studentName">Full Name</label>
-                    <input type="text" name="studentName" id="studentName">
-                </div>
-                <div class="formInputs">
-                    <label for="fatherName">Father Name</label>
-                    <input type="text" name="fatherName" id="fatherName">
-                </div>
-                <div class="formInputs">
-                    <label for="studentAge">Age</label>
-                    <input type="number" name="studentAge" id="studentAge">
-                </div>
-                <div class="formInputs">
-                    <label for="studentGender">Gender</label>
-                    <input type="radio" name="studentGender" value="male"> Male
-                    <input type="radio" name="studentGender" value="female"> Female
-                </div>
-                <div class="formInputs">
-                    <label for="studentPhone">Phone</label>
-                    <input type="number" name="studentPhone" id="studentPhone"> 
-                </div>
+            <div class="heading">
+                <h1>Student Registration Form</h1>
+            </div>
 
-                <div class="submitButton">
-                    <button type="submit">Submit</button>
-                </div>
-            </form>
+            <div id="form">
+                <form action="/form/registration">
+                    <div class="formInputs">
+                        <input type="text" name="studentName" id="studentName" placeholder="Enter Your Name">
+                    </div>
+                    <div class="formInputs">
+                        <input type="text" name="fatherName" id="fatherName" placeholder="Enter Your Father's Name">
+                    </div>
+                    <div class="formInputs">
+                        <input type="number" name="studentAge" id="studentAge" placeholder="Enter Your Age">
+                    </div>
+                    <div class="formInputs">
+                        <label for="studentGender">Gender</label>
+                        <input type="radio" name="studentGender" value="male"> Male
+                        <input type="radio" name="studentGender" value="female"> Female
+                    </div>
+                    <div class="formInputs">
+                        <input type="number" name="studentPhone" id="studentPhone" placeholder="Enter Your Phone">
+                    </div>
+
+                    <div class="submitButton">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </body>
+
 </html>
