@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <form onsubmit="login(event)">
+                <input type="text" id="username" placeholder="Username">
+                <input type="password" id="password" placeholder="Password">
+                <div class="buttons">
+                    <button type="submit" class="login-button">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        async function login( event ) {
+            event.preventDefault();
+
+            var data = {
+                username: document.getElementById("username").value,
+                password: document.getElementById("password").value
+            };
+
+            var res = await fetch('/auth/login', {
+                method: "POST",
+                body: JSON.stringify( data ),
+                headers: {
+                    "content-type": "application/json"
+                }
+            });
+
+            res = await res.json();
+
+            if( res.success ) {
+                alert( res.message );
+                window.location.replace('/form');
+            } else {
+                alert( res.message );
+            };
+        };
+    </script>
+</body>
+</html>
